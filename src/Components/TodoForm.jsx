@@ -3,7 +3,7 @@ import { TodoContext } from "../Store/TodoContext";
 import { useContext } from "react";
 
 const TodoForm =()=>{
-    const {newtodo} =useContext(TodoContext)
+    const {newtodo, todo} =useContext(TodoContext)
 
     const [todoInput, setTodoInput] =useState('');
 
@@ -25,11 +25,18 @@ const TodoForm =()=>{
 
     return (
         <form onSubmit={handleSubmit}>
-            <button type="submit">Add</button>
-            <input
+            <div className="flex justify-center space-x-96 pt-8">
+            
+            <button type="submit" className="bg-blue-600 border-sm text-white px-3 rounded-sm" >Add Todo</button>
+            <p>No of Todos: {todo.length}</p>
+            
+            </div>
+            <div className="flex justify-center pt-4">
+            <input className="border-2 w-[36rem] "
              type="text"
              value={todoInput}
              onChange={handleInput}/>
+             </div>
         </form>
     )
 
