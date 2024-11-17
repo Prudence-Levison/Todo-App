@@ -5,8 +5,8 @@ import TodoForm from './Components/TodoForm';
 
 function App() {
   return (
-    <div className=" h-screen bg-blue-50 ">
-      <h1 className='flex justify-center text-xl pt-32 font-bold'>TODO LIST</h1>
+    <div className=" h-screen bg-black ">
+      <h1 className='flex justify-center text-xl text-white pt-20 lg:pt-32 font-bold'>TODO LIST</h1>
 
       <TodoProvider>
         <TodoForm />
