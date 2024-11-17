@@ -10,7 +10,7 @@ const  TodoList =()=> {
             {todo.map((todos, index)=>
              (<li key={index}>{todos}
              
-             <button className="border-2 px-2  m-2 pt-0 bg-green-600" onClick={() =>
+             <button className="border-1 px-2  m-2 pt-0 bg-green-600" onClick={() =>
                 deletetodo (index)}>x</button>
              </li>
              ))}
